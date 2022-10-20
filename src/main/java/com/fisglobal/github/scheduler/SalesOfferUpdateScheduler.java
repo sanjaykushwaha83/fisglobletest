@@ -26,10 +26,9 @@ public class SalesOfferUpdateScheduler {
 
 		List<SalesOfferResponse> offers = salesOfferService.getAllOffers();
 		for (SalesOfferResponse offer : offers) {
-			log.info("id:"+offer.getId()+" CreatedDateTime:"+offer.getCreatedDateTime()+" ExpiryDateTime:"+offer.getExpiryDateTime()+" isActive:"+offer.isActive());
+			
 			if (LocalDateTime.now().isAfter(offer.getExpiryDateTime())) {
-				SalesOfferResponse res= salesOfferService.updateOffer(transformRequset(offer));
-				log.info("After update: id:"+res.getId()+" CreatedDateTime:"+res.getCreatedDateTime()+" ExpiryDateTime:"+res.getExpiryDateTime()+" isActive:"+res.isActive());
+				salesOfferService.updateOffer(transformRequset(offer));
 			}
 		}
 		//Thread.sleep(10000);
