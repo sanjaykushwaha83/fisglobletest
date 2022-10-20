@@ -16,7 +16,7 @@ A scheduler are craeted to find any expired offer and mark as inactive. Schedule
 
 
 ### Steps to run this project
-Checkout/download this maven project from github (https://github.com/sanjaykushwaha83/fisglobaltest.git)
+Checkout/download this maven project from github (https://github.com/sanjaykushwaha83/fisglobletest.git)
 
 1. Open command prompt and go to project checkout/download directory 
 2. Clean and build this Maven project using below command
